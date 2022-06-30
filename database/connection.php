@@ -25,6 +25,10 @@ $createDonorTable = "CREATE TABLE IF NOT EXISTS `donortable`(
     `donationVenue` TEXT
 );";
 
-mysqli_query($conn, $createDonorTable);
+$createBloodTypes = "CREATE TABLE IF NOT EXISTS `bloodTypes`(`bloodType` TEXT);";
+$insertBloodTypes = "INSERT INTO bloodTypes(bloodType) VALUES ('A+'), ('A-'), ('B+'), ('B-'), ('O+'), ('O-'), ('AB+'), ('AB-');";
 
+mysqli_query($conn, $createDonorTable);
+mysqli_query($conn, $createBloodTypes);
+mysqli_query($conn, $insertBloodTypes);
 ?>
