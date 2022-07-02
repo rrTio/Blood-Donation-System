@@ -16,14 +16,21 @@ $createDonorTable = "CREATE TABLE IF NOT EXISTS `donortable`(
     `middleName` TEXT,
     `lastName` TEXT,
     `fullName` TEXT,
+    `birthMonth` VARCHAR(2),
+    `birthDay` VARCHAR(2),
+    `birthYear` VARCHAR(4),
     `age` VARCHAR(3),
     `gender` TEXT,
+    `donationText` TEXT,
     `donationDate` DATE,
     `donationTime` TEXT,
     `donorAddress` TEXT,
     `bloodType` TEXT,
     `contactNumber` VARCHAR(11),
-    `donationVenue` TEXT
+    `donationVenue` TEXT,
+    `userName` TEXT,
+    `donorEmail` TEXT,
+    `donorPassword` TEXT
 );";
 
 $createPatient = "CREATE TABLE IF NOT EXISTS `patientsTable`(
