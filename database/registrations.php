@@ -28,7 +28,27 @@ if(isset($_POST['btnRegisterDonor'])){
     $insertToDonorTable = "INSERT INTO donortable (donorID, firstName, middleName, lastName, fullName, birthMonth, birthDay, birthYear, age, gender, donationText, donationDate, donationTime, donorAddress, bloodType, contactNumber, donationVenue, userName, donorEmail, donorPassword)
                             VALUES('$donorID', '$firstName', '$middleName', '$lastName', '$fullName', '$birthMonth', '$birthDay', '$birthYear', '$age', '$gender', '$donationDateText', '$donationDate', '$donationTime', '$donorAddress', '$bloodType', '$contactNumber', '$donationVenue', '$userName', '$email', '$password');";
     mysqli_query($conn, $insertToDonorTable);
-    header("Location: ../index.php");
+    header("Location: ../donorLogin.php");
+}
+
+if(isset($_POST['btnRegisterHead'])){
+    $headID = $_POST['headID'];
+    $lastName = $_POST['lastName'];
+    $firstName = $_POST['firstName'];
+    $middleName = $_POST['middleName'];
+    $fullName = $lastName . ', ' . $firstName . ' ' . $middleName;
+    $position = $_POST['position'];
+    $organization = $_POST['organization'];
+    $cityAddress = $_POST['cityAdd'];
+    $mobileNumber = $_POST['mobileNumber'];
+    $userName = $_POST['uName'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $insertToHeadTable = "INSERT INTO headtable (headID, firstName, middleName, lastName, fullName, headAddress, contactNumber, headPosition, organization, email, userName, headPassword)
+                            VALUES ('$headID', '$firstName', '$middleName', '$lastName', '$fullName', '$cityAddress', '$mobileNumber', '$position', '$organization', '$email', '$userName', '$password');";
+    mysqli_query($conn, $insertToHeadTable);
+    header("Location: ../headLogin.php");
 }
 
 ?>

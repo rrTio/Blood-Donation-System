@@ -7,7 +7,7 @@ $id = date("Y") . "-" . "03" . substr(hexdec(uniqid()), 12) . date("s");
 <html lang="en" >
 <head>
     <meta charset="UTF-8" http-equiv="Content-Type">
-    <title>Donor Registration Form</title>
+    <title>Admin Registration Form</title>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"/>
@@ -16,23 +16,24 @@ $id = date("Y") . "-" . "03" . substr(hexdec(uniqid()), 12) . date("s");
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://unicons.iconscout.com/release/v3.0.6/css/line.css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/donorRegistration.css">
-    <script type="text/javascript" src="./assets/js/donorRegistration.js"></script>
+    <link rel="stylesheet" href="./assets/css/headRegistration.css">
+    <script type="text/javascript" src="./assets/js/headRegistration.js"></script>
 </head>
 <body>
     <section>
             <div class="container mt-3">
-                <form name="donorReg" method="POST" action="./database/registrations.php" enctype="multipart/form-data">
-                    <input type="hidden" name='donorID' value='<?php echo $id?>'>
+                <form name="headReg" method="POST" action="./database/registrations.php">
+                    <input type="hidden" name='headID' value='<?php echo $id?>'>
                     <div class="row mb-2 headerTitle">
                         <div class="col-md-12">
                             <center>
-                                <h1>Donor  Registration Form</h1>
+                                <h1>Admin Registration Form</h1>
                             </center>
                             <h4>Basic Information</h4>
-                            <h6>Donor ID: <?php echo $id?></h4>
+                            <h6>Head ID: <?php echo $id?></h4>
                         </div>
                     </div>
+                    <!--NAME ROW-->
                     <div class="row mt-4">
                         <div class="col-md-12">
                             <div class="row mb-4">
@@ -55,87 +56,30 @@ $id = date("Y") . "-" . "03" . substr(hexdec(uniqid()), 12) . date("s");
                                     </div>
                                 </div>
                             </div>
-                            <div class="row mb-4">
-                                <div class="col-md-3">
-                                    <div class="form-floating">
-                                        <select class="form-control form-control-lg p-2 pt-3" id="bMonth" name="bMonth" required>
-                                            <option selected disabled>--SELECT--</option>
-                                            <?php
-                                                $getMonths = "SELECT * FROM birthmonths;";
-                                                $resultMonths = mysqli_query($conn, $getMonths);
-                                                if(mysqli_num_rows($resultMonths) > 0){
-                                                    while($months = mysqli_fetch_assoc($resultMonths)){
-                                                        echo"<option value=".$months['birthmonths'].">".$months['birthmonths']."</option>";
-                                                    }
-                                                }
-                                            ?>
-                                        </select>
-                                        <label class="form-label" for="bMonth">BIRTH MONTH</label>    
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-floating">
-                                        <select class="form-control form-control-lg p-2 pt-3" id="bDay" name="bDay" required>
-                                            <option selected disabled>--SELECT--</option>
-                                            <?php
-                                                $getDays = "SELECT * FROM birthdays;";
-                                                $resultDays = mysqli_query($conn, $getDays);
-                                                if(mysqli_num_rows($resultDays) > 0){
-                                                    while($days = mysqli_fetch_assoc($resultDays)){
-                                                        echo "<option value=".$days['birthdays'].">".$days['birthdays']."</option>";
-                                                    }
-                                                }
-                                            ?>
-                                        </select>
-                                        <label class="form-label" for="bDay">BIRTH DAY</label>
-                                    </div> 
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="number" id="bYear" name="bYear" placeholder="Birth Year" required>
-                                        <label class="form-label" for="bYear">BIRTH YEAR</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="number" id="age" name="age" placeholder="age" required>
-                                        <label class="form-label" for="age">AGE</label>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
+                    <!--POSITION AND ORGANIZATION ROW-->
                     <div class="row mb-4">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-floating">
-                                <select class="form-control form-control-lg p-2 pt-3" id="bType" name="bType" required>
+                                <select class="form-control form-control-lg p-2 pt-3" id="position" name="position" required>
                                     <option selected disabled>--SELECT--</option>
                                     <?php
-                                        $getBloodType = "SELECT * FROM bloodtypestable;";
-                                        $resultBlood = mysqli_query($conn, $getBloodType);
-                                        if(mysqli_num_rows($resultBlood) > 0){
-                                            while($blood = mysqli_fetch_assoc($resultBlood)){
-                                                echo "<option value=".$blood['bloodType'].">".$blood['bloodType']."</option>";
+                                        $getPosition = "SELECT * FROM positionstable;";
+                                        $resultPosition = mysqli_query($conn, $getPosition);
+                                        if(mysqli_num_rows($resultPosition) > 0){
+                                            while($position = mysqli_fetch_assoc($resultPosition)){
+                                                echo "<option value=".$position['positions'].">".$position['positions']."</option>";                                          
                                             }
                                         }
                                     ?>
                                 </select>
-                                <label class="form-label" for="bType">BLOOD TYPE</label>    
+                                <label class="form-label" for="position">POSITION</label>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-floating">
-                                <select class="form-control form-control-lg p-2 pt-3" id="gender" name="gender" required>
-                                    <option selected disabled>--SELECT--</option>
-                                    <option value="Male">Male</option>
-                                    <option value="Female">Female</option>
-                                </select>
-                                <label class="form-label" for="gender">GENDER</label>    
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-floating">
-                                <select class="form-control form-control-lg p-2 pt-3" id="venue" name="venue" required>
+                                <select class="form-control form-control-lg p-2 pt-3" id="organization" name="organization" required>
                                     <option selected disabled>--SELECT--</option>
                                     <?php
                                         $getOrganization = "SELECT * FROM organizationsTable;";
@@ -147,10 +91,11 @@ $id = date("Y") . "-" . "03" . substr(hexdec(uniqid()), 12) . date("s");
                                         }
                                     ?>
                                 </select>
-                                <label class="form-label" for="venue">DONATON VENUE</label>    
+                                <label class="form-label" for="organization">ORGANIZATION</label>    
                             </div>
                         </div>
                     </div>
+                    <!--CONTACT INFORMATION-->
                     <div class="row mb-2 headerTitle">
                         <div class="col-md-12">
                             <center>
@@ -172,6 +117,7 @@ $id = date("Y") . "-" . "03" . substr(hexdec(uniqid()), 12) . date("s");
                             </div>
                         </div>
                     </div>
+                    <!--ACCOUNT CREDENTIALS-->
                     <div class="row mb-2 headerTitle">
                         <div class="col-md-12">
                             <center>
@@ -206,11 +152,12 @@ $id = date("Y") . "-" . "03" . substr(hexdec(uniqid()), 12) . date("s");
                                 <label class="form-label" for="confirmPassword">CONFIRM PASSWORD</label>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
+                    <!--BUTTON-->               
                     <center>
                         <div class="row mb-5">
                             <div class="col-md-12">
-                                <button type="submit" name="btnRegisterDonor" onClick="checkValidation()" class="btn btn-danger btn-block btn-large">Register</button>
+                                <button type="submit" name="btnRegisterHead" onClick="checkValidation()" class="btn btn-danger btn-block btn-large">Register</button>
                             </div>
                         </div>
                     </center>

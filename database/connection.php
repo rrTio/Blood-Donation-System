@@ -10,13 +10,28 @@ $createDB = "CREATE DATABASE IF NOT EXISTS bloodDB;";
 mysqli_query($conn, $createDB);
 mysqli_select_db($conn, "bloodDB");
 
+$createHeadTable = "CREATE TABLE IF NOT EXISTS `headtable`(
+    `headID` TEXT,
+    `firstName` TEXT,
+    `middleName` TEXT,
+    `lastName` TEXT,
+    `fullName` TEXT,
+    `headAddress` TEXT,
+    `contactNumber` TEXT,
+    `headPosition` TEXT,
+    `organization` TEXT,
+    `email` TEXT,
+    `userName` TEXT,
+    `headPassword` TEXT
+);";
+
 $createDonorTable = "CREATE TABLE IF NOT EXISTS `donortable`(
     `donorID` TEXT,
     `firstName` TEXT,
     `middleName` TEXT,
     `lastName` TEXT,
     `fullName` TEXT,
-    `birthMonth` VARCHAR(2),
+    `birthMonth` VARCHAR(3),
     `birthDay` VARCHAR(2),
     `birthYear` VARCHAR(4),
     `age` VARCHAR(3),
@@ -55,6 +70,7 @@ $insertPosition = "INSERT IGNORE INTO positionsTable(positions) VALUES ('Admin')
 $insertMonths = "INSERT IGNORE INTO birthMonths (birthmonths) VALUES ('January'),('February'),('March'),('April'),('May'),('June'),('July'),('August'),('September'),('October'),('November'),('December');";
 $insertDays = "INSERT IGNORE INTO birthDays (birthdays) VALUES ('01'),('02'),('03'),('04'),('05'),('06'),('07'),('08'),('09'),('10'),('11'),('12'),('13'),('14'),('15'),('16'),('17'),('18'),('19'),('20'),('21'),('22'),('23'),('24'),('25'),('26'),('27'),('28'),('29'),('30'),('31');";
 
+mysqli_query($conn, $createHeadTable);
 mysqli_query($conn, $createDonorTable);
 mysqli_query($conn, $createPatient);
 

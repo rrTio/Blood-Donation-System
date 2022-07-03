@@ -13,5 +13,5 @@ function checkValidation(){
 }
 
 function returnPage(){
-    window.location.href = "./index.php";
+    window.location.href = "./headLogin.php";
 }
