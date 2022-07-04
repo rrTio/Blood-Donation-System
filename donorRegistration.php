@@ -17,6 +17,7 @@ $id = date("Y") . "-" . "03" . substr(hexdec(uniqid()), 12) . date("s");
     <link rel='stylesheet' href='https://unicons.iconscout.com/release/v3.0.6/css/line.css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/donorRegistration.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <script type="text/javascript" src="./assets/js/donorRegistration.js"></script>
 </head>
 <body>

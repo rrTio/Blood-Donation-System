@@ -15,6 +15,7 @@
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.1.1-beta1/dist/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://unicons.iconscout.com/release/v3.0.6/css/line.css'>
     <link rel="stylesheet" href="./assets/css/forgotPassword.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
     <script type="text/javascript" src="./assets/js/donorForgotPassword.js"></script>
   </head>
 

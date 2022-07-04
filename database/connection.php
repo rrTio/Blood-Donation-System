@@ -58,6 +58,19 @@ $createPatient = "CREATE TABLE IF NOT EXISTS `patientsTable`(
     `gender` TEXT
 );";
 
+$createRequestTable = "CREATE TABLE IF NOT EXISTS `requestTable`(
+    `donorID` TEXT,
+    `firstName` TEXT,
+    `lastName` TEXT,
+    `fullName` TEXT,
+    `bloodType` TEXT,
+    `email` TEXT,
+    `contactNumber` VARCHAR(11),
+    `donorAddress` TEXT,
+    `gender` TEXT,
+    `venue` TEXT
+);";
+
 $createBloodTypes = "CREATE TABLE IF NOT EXISTS `bloodTypesTable`(`bloodType` TEXT UNIQUE);";
 $createOrganization = "CREATE TABLE IF NOT EXISTS  `organizationsTable`(`organization` TEXT UNIQUE);";
 $createPositions = "CREATE TABLE IF NOT EXISTS `positionsTable`(`positions` TEXT UNIQUE);";
@@ -73,6 +86,7 @@ $insertDays = "INSERT IGNORE INTO birthDays (birthdays) VALUES ('01'),('02'),('0
 mysqli_query($conn, $createHeadTable);
 mysqli_query($conn, $createDonorTable);
 mysqli_query($conn, $createPatient);
+mysqli_query($conn, $createRequestTable);
 
 mysqli_query($conn, $createBloodTypes);
 mysqli_query($conn, $createOrganization);
