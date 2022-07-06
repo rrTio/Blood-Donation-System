@@ -18,12 +18,12 @@ if(isset($_POST['btnLoginHead'])){
             $lastName = $head['lastName'];
             $headID = $head['headID'];
         }
-        header("location: ");
+        header("location: ../headRequestList.php");
     }
 
     else{
-        echo '<script> alert("Error credentials"); </script>';
-        header("Location: ../index.php");
+        header("Location: ../headLogin.php");
+        echo '<script> alert("Error credentials") </script>';
     }
 }
 
@@ -61,8 +61,8 @@ if(isset($_POST['btnLoginDonor'])){
     }
 
     else{
-        echo '<script> alert("Error credentials"); </script>';
-        header("Location: ../index.php");
+        header("Location: ../donorLogin.php");
+        echo '<script> alert("Error credentials") </script>';
     }
 }
 

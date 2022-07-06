@@ -93,13 +93,13 @@ $id = date("Y") . "-" . "03" . substr(hexdec(uniqid()), 12) . date("s");
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="number" id="bYear" name="bYear" placeholder="Birth Year" required>
+                                        <input class="form-control form-control-lg" type="number" id="bYear" name="bYear" placeholder="Birth Year" onKeyPress="if(this.value.length==4) return false;" required>
                                         <label class="form-label" for="bYear">BIRTH YEAR</label>
                                     </div>
                                 </div>
                                 <div class="col-md-3">
                                     <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="number" id="age" name="age" placeholder="age" required>
+                                        <input class="form-control form-control-lg" type="number" id="age" name="age" placeholder="age" onKeyPress="if(this.value.length==3) return false;" required>
                                         <label class="form-label" for="age">AGE</label>
                                     </div>
                                 </div>

@@ -14,9 +14,6 @@ if(isset($_POST['btnRegisterDonor'])){
     $birthYear = $_POST['bYear'];
     $age = $_POST['age'];
     $gender = $_POST['gender'];
-    $donationDate = date('Y-m-d');
-    $donationDateText = date('M d, Y');
-    $donationTime = date('h:ia');
     $donorAddress = $_POST['cityAdd'];
     $bloodType = $_POST['bType'];
     $contactNumber = $_POST['mobileNumber'];
@@ -25,8 +22,8 @@ if(isset($_POST['btnRegisterDonor'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    $insertToDonorTable = "INSERT INTO donortable (donorID, firstName, middleName, lastName, fullName, birthMonth, birthDay, birthYear, age, gender, donationText, donationDate, donationTime, donorAddress, bloodType, contactNumber, donationVenue, userName, donorEmail, donorPassword)
-                            VALUES('$donorID', '$firstName', '$middleName', '$lastName', '$fullName', '$birthMonth', '$birthDay', '$birthYear', '$age', '$gender', '$donationDateText', '$donationDate', '$donationTime', '$donorAddress', '$bloodType', '$contactNumber', '$donationVenue', '$userName', '$email', '$password');";
+    $insertToDonorTable = "INSERT INTO donortable (donorID, firstName, middleName, lastName, fullName, birthMonth, birthDay, birthYear, age, gender, donorAddress, bloodType, contactNumber, donationVenue, userName, donorEmail, donorPassword)
+                            VALUES('$donorID', '$firstName', '$middleName', '$lastName', '$fullName', '$birthMonth', '$birthDay', '$birthYear', '$age', '$gender', '$donorAddress', '$bloodType', '$contactNumber', '$donationVenue', '$userName', '$email', '$password');";
     mysqli_query($conn, $insertToDonorTable);
     header("Location: ../donorLogin.php");
 }
