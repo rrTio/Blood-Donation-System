@@ -57,6 +57,7 @@ include_once("./database/connection.php");
                     <th>Phone</th>
                     <th>Gender</th>
                     <th>Blood Type</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -73,6 +74,7 @@ include_once("./database/connection.php");
                                 <td name='phone'>".$donorRequests['contactNumber']."</td>
                                 <td name='gender'>".$donorRequests['gender']."</td>
                                 <td name='bloodtype'>".$donorRequests['bloodType']."</td>
+                                <td name='accept'><button class='btn-primary' name='btnAccept' value=".$donorRequests['donorID'].">VIEW FORM</button></td>
                             </tr>
                             ";
                         }
