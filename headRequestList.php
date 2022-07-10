@@ -67,15 +67,17 @@ include_once("./database/connection.php");
                     if(mysqli_num_rows($requests) > 0){
                         while($donorRequests = mysqli_fetch_assoc($requests)){
                             echo "
-                            <tr id='requestsRow'>
-                                <td name='donorID'>".$donorRequests['donorID']."</td>
-                                <td name='name'>".$donorRequests['fullName']."</td>
-                                <td name='email'>".$donorRequests['email']."</td>
-                                <td name='phone'>".$donorRequests['contactNumber']."</td>
-                                <td name='gender'>".$donorRequests['gender']."</td>
-                                <td name='bloodtype'>".$donorRequests['bloodType']."</td>
-                                <td name='accept'><button class='btn-primary' name='btnAccept' value=".$donorRequests['donorID'].">VIEW FORM</button></td>
-                            </tr>
+                            <form method='POST' action='./headViewRequestForm.php'>
+                                <tr id='requestsRow'>
+                                    <td name='donorID'>".$donorRequests['donorID']."</td>
+                                    <td name='name'>".$donorRequests['fullName']."</td>
+                                    <td name='email'>".$donorRequests['email']."</td>
+                                    <td name='phone'>".$donorRequests['contactNumber']."</td>
+                                    <td name='gender'>".$donorRequests['gender']."</td>
+                                    <td name='bloodtype'>".$donorRequests['bloodType']."</td>
+                                    <td name='view'><button class='btn-primary' name='btnView' value=".$donorRequests['donorID'].">VIEW FORM ".$donorRequests['donorID']."</button></td>
+                                </tr>
+                            </form>
                             ";
                         }
                     }
