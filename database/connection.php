@@ -71,6 +71,48 @@ $createRequestTable = "CREATE TABLE IF NOT EXISTS `requestTable`(
     `venue` TEXT
 );";
 
+$createRequestFormTable = "CREATE TABLE IF NOT EXISTS `requestFormTable`(
+    `donorID` TEXT,
+    `fullName` TEXT,
+    `question1` TEXT DEFAULT('NO ANSWER'),
+    `question2` TEXT DEFAULT('NO ANSWER'),
+    `question3` TEXT DEFAULT('NO ANSWER'),
+    `question4` TEXT DEFAULT('NO ANSWER'),
+    `question5` TEXT DEFAULT('NO ANSWER'),
+    `question6` TEXT DEFAULT('NO ANSWER'),
+    `question7` TEXT DEFAULT('NO ANSWER'),
+    `question8` TEXT DEFAULT('NO ANSWER'),
+    `question9` TEXT DEFAULT('NO ANSWER'),
+    `question10` TEXT DEFAULT('NO ANSWER'),
+    `question11` TEXT DEFAULT('NO ANSWER'),
+    `question12` TEXT DEFAULT('NO ANSWER'),
+    `question13` TEXT DEFAULT('NO ANSWER'),
+    `question14` TEXT DEFAULT('NO ANSWER'),
+    `question15` TEXT DEFAULT('NO ANSWER'),
+    `question16` TEXT DEFAULT('NO ANSWER'),
+    `question17` TEXT DEFAULT('NO ANSWER'),
+    `question18` TEXT DEFAULT('NO ANSWER'),
+    `question19` TEXT DEFAULT('NO ANSWER'),
+    `question20` TEXT DEFAULT('NO ANSWER'),
+    `question21` TEXT DEFAULT('NO ANSWER'),
+    `question22` TEXT DEFAULT('NO ANSWER'),
+    `question23` TEXT DEFAULT('NO ANSWER'),
+    `question24` TEXT DEFAULT('NO ANSWER'),
+    `question25` TEXT DEFAULT('NO ANSWER'),
+    `question26` TEXT DEFAULT('NO ANSWER'),
+    `question27` TEXT DEFAULT('NO ANSWER'),
+    `question28` TEXT DEFAULT('NO ANSWER'),
+    `question29` TEXT DEFAULT('NO ANSWER'),
+    `question30` TEXT DEFAULT('NO ANSWER'),
+    `question31` TEXT DEFAULT('NO ANSWER'),
+    `question32` TEXT DEFAULT('NO ANSWER'),
+    `question33` TEXT DEFAULT('NO ANSWER'),
+    `question34` TEXT DEFAULT('NO ANSWER'),
+    `question35` TEXT DEFAULT('NO ANSWER'),
+    `question36` TEXT DEFAULT('NO ANSWER'),
+    `question37` TEXT DEFAULT('NO ANSWER')
+);";
+
 $createBloodTypes = "CREATE TABLE IF NOT EXISTS `bloodTypesTable`(`bloodType` TEXT UNIQUE);";
 $createOrganization = "CREATE TABLE IF NOT EXISTS  `organizationsTable`(`organization` TEXT UNIQUE);";
 $createPositions = "CREATE TABLE IF NOT EXISTS `positionsTable`(`positions` TEXT UNIQUE);";
@@ -93,6 +135,7 @@ mysqli_query($conn, $createOrganization);
 mysqli_query($conn, $createPositions);
 mysqli_query($conn, $createMonths);
 mysqli_query($conn, $createDays);
+mysqli_query($conn, $createRequestFormTable);
 
 mysqli_query($conn, $insertBloodTypes);
 mysqli_query($conn, $insertOrganization);

@@ -57,7 +57,7 @@ include_once("./database/connection.php");
                     ?>
                     
                     <!--TWO COLUMN QUESTION-->
-                    <div class="row mb-2 headerBlock">
+                    <div class="row mb-2">
                         <div class="col-md-12">
                             <center>
                                 <h1>Donor's Info</h1>
@@ -82,14 +82,13 @@ include_once("./database/connection.php");
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" value="<?php echo $donorID ?>" disabled>
-                                        <label class="form-label" for="fName">Donor ID</label>
+                                        <input class="form-control form-control-lg p-2" type="text" id="answer" name="answer" value="<?php echo $donorID ?>" disabled>
+                                        <input type="hidden" name='fullName' value='<?php echo $fullName?>'>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" value="<?php echo $fullName ?>"  disabled>
-                                        <label class="form-label" for="fName">Full Name</label>
+                                        <input class="form-control form-control-lg p-2" type="text" id="answer" name="answer" value="<?php echo $fullName ?>" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -113,14 +112,12 @@ include_once("./database/connection.php");
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" value="<?php echo $birthDate ?>" disabled>
-                                        <label class="form-label" for="answer">Birth Date</label>
+                                        <input class="form-control form-control-lg p-2" type="text" id="answer" name="answer" value="<?php echo $birthDate ?>" disabled>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" value="<?php echo $age ?>" disabled>
-                                        <label class="form-label" for="fName">Age</label>
+                                        <input class="form-control form-control-lg p-2" type="text" id="answer" name="answer" value="<?php echo $age ?>" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -144,14 +141,12 @@ include_once("./database/connection.php");
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" value="<?php echo $gender ?>" disabled>
-                                        <label class="form-label" for="answer">Gender</label>
+                                        <input class="form-control form-control-lg p-2" type="text" id="answer" name="answer" value="<?php echo $gender ?>" disabled>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" value="<?php echo $bloodType ?>" disabled>
-                                        <label class="form-label" for="fName">Blood Type</label>
+                                        <input class="form-control form-control-lg p-2" type="text" id="answer" name="answer" value="<?php echo $bloodType ?>" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -175,15 +170,13 @@ include_once("./database/connection.php");
                             <div class="row mb-3">
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" value="<?php echo $email ?>" disabled>
-                                        <label class="form-label" for="answer">Email</label>
-                                        <input type='hidden' value='<?php echo $email?>' name='email'>
+                                        <input class="form-control form-control-lg p-2" type="text" id="answer" name="answer" value="<?php echo $email ?>" disabled>
+                                        <input type="hidden" name='email' value='<?php echo $email?>'>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" value="<?php echo $contactNumber ?>" disabled>
-                                        <label class="form-label" for="fName">Contact Number</label>
+                                        <input class="form-control form-control-lg p-2" type="text" id="answer" name="answer" value="<?php echo $contactNumber ?>" disabled>
                                     </div>
                                 </div>
                             </div>
@@ -200,15 +193,15 @@ include_once("./database/connection.php");
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" value="<?php echo $address ?>" disabled>
-                                        <label class="form-label" for="answer">Address</label>
+                                        <input class="form-control form-control-lg p-2" type="text" id="answer" name="answer" value="<?php echo $address ?>" disabled>
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="row mb-2 headerBlock">
+                    <div class="row mb-4 headerBlock">
                         <div class="col-md-12">
                             <center>
                                 <h1>Donor's Request Form</h1>
@@ -216,123 +209,936 @@ include_once("./database/connection.php");
                         </div>
                     </div>
 
-                    <!--ONE COLUMN QUESTION-->
-                    <div class="row mt-2">
-                        <div class="col-md-12">
-                            <div class="row mt-2">
-                                <div class="col-md-12">
-                                    <h3>
-                                        Question 1
-                                    </h3>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" placeholder="answer" disabled>
-                                        <label class="form-label" for="answer">ANSWER</label>
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>1.	Maayos ba ang iyong kalusugan at pakiramdam ngayong araw?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question1" name="question1" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!--BREAK-->
 
-                    <div class="row mt-2">
-                        <div class="col-md-12">
-                            <div class="row mt-2">
-                                <div class="col-md-12">
-                                    <h3>
-                                        Question 2
-                                    </h3>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" placeholder="answer" disabled>
-                                        <label class="form-label" for="answer">ANSWER</label>
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>2.	Nagkaroon ba ng pagkakataon na ikaw ay natanggihan o nasabing hindi maaring magbigya ng dugo?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question2" name="question2" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!--BREAK-->
 
-                    <div class="row mt-2">
-                        <div class="col-md-12">
-                            <div class="row mt-2">
-                                <div class="col-md-12">
-                                    <h3>
-                                        Question 3
-                                    </h3>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" placeholder="answer" disabled>
-                                        <label class="form-label" for="answer">ANSWER</label>
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>3.	Magbibigay ng dugo upang masuri lamang sa HIV/AIDS o Hepatitis virus o iba pang nakakahang sakit?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question3" name="question3" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!--BREAK-->
 
-                    <div class="row mt-2">
-                        <div class="col-md-12">
-                            <div class="row mt-2">
-                                <div class="col-md-12">
-                                    <h3>
-                                        Question 4
-                                    </h3>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" placeholder="answer" disabled>
-                                        <label class="form-label" for="answer">ANSWER</label>
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>4.	Alam mo bang ang taong may taong HIV/AIDS ay maari pa ring makawa ng virus kahit na negatibo sa HIV/AIDS /Hepatitis test?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question4" name="question4" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!--BREAK-->
 
-                    <div class="row mt-2">
-                        <div class="col-md-12">
-                            <div class="row mt-2">
-                                <div class="col-md-12">
-                                    <h3>
-                                        Question 5
-                                    </h3>
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" placeholder="answer" disabled>
-                                        <label class="form-label" for="answer">ANSWER</label>
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>5.	Sa loob ng 12 ORAS nakainom ka ba ng alak, serbesa o anumang inumang may alkohol?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question5" name="question5" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!--BREAK-->
 
-                    <div class="row mt-2">
-                        <div class="col-md-12">
-                            <div class="row mt-2">
-                                <div class="col-md-12">
-                                    <h3>
-                                        Question 6
-                                    </h3>
-                                </div>
-                                <div class="col-md-12 mb-5">
-                                    <div class="form-floating">
-                                        <input class="form-control form-control-lg" type="text" id="answer" name="answer" placeholder="answer" disabled>
-                                        <label class="form-label" for="answer">ANSWER</label>
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>6.	Saloob ng 3 ARAW, nakainom ka ba ng aspirin?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question6" name="question6" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!--BREAK-->
 
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>7.	Sa nakalipas na 4 NA LINGGO, nakainom ka ba ng gamot o nabakunahan?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question7" name="question7" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>8.	Sa nakalipas na 3 BUWAN, ikaw ba ay, Nakapaghandog ng dugo, platelets o plasma?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question8" name="question8" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+
+                    <div class="row mb-2 mt-4">
+                        <div class="col-md-12">
+                            <center>
+                                <h1>SA NAKALIPAS NA 12 BUWAN IKAW BA AY</h1>
+                            </center>
+                        </div>
+                    </div>
+
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>9.	Nakapunta sa kahit anong lugar sa Pilipinas o ibang bansa na may ZIKA virus?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question9" name="question9" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>10.	Nakipagtalik na sa isang tao na kumpirmadong may impeksyon mula sa ZIKA virus?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question10" name="question10" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>11.	Nakipagtalik na sa isang tao na nakapunta sa kahit anong lugar sa Pilipinas o ibang bansa na may ZIKA virus?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question11" name="question11" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+
+                    <div class="row mb-2 mt-4">
+                        <div class="col-md-12">
+                            <center>
+                                <h1>SA NAKALIPAS NA 12 BUWAN IKAW BA AY:</h1>
+                            </center>
+                        </div>
+                    </div>
+
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>12.	Nasalinan ng dugo dahil sa heamophilia o naoperahan at nahandugan ng bahagi ng katawan ng ibang tao?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question12" name="question12" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>13.	Sumailalim sa isang operasyong medikal o nagpanbunot ng ngipin?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question13" name="question13" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>14.	Nagpalagy ng tato, butas sa tenga o katawan, accupancture, natusok ng karayom o aksidenting nadiit sa dugo?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question14" name="question14" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>15.	Nakipagtalik sa mga taong may mataas na posibilidad na di ligtas o kaya ay kapalit ng material na bagay o pinansyal?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question15" name="question15" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>16.	Nakipagtalik sa paraang di ligtas o di protektado?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question16" name="question16" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>17.	May pagkakataon na nanilaw, nagkasakit o nakihalubilo sa may sakit sa atay?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question17" name="question17" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>18.	Nakulong o napiit sa isang kulungan?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question18" name="question18" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>19.	Nanirahan o may mga kamag anak sa United Kingdom o Europa?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question19" name="question19" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+                    
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+
+                    <div class="row mb-2 mt-4">
+                        <div class="col-md-12">
+                            <center>
+                                <h1>IKAW BA AY:</h1>
+                            </center>
+                        </div>
+                    </div>
+
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>20.	Nagbiyahe o nanirahan maliban sa kasalukuyan mong tirahan o sa labas ng Pilipinas?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question20" name="question20" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>21.	Nakagamit ng ipinagbabawal na gamot?? (uminom,lumanghap o nagturok)?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question21" name="question21" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>22.	Nakagamit ng mga gamot para sa maayos na pagpigil sa pangkaraniwang pagdurugo?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question22" name="question22" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>23.	Nagpositibo sa pagsusuri para sa HIV, Hepatitis, Syphilis o Malaria?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question23" name="question23" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>24.	Nagkaroon na ng Malaria o sakit sa atay?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question24" name="question24" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>25.	Nagkaroon o nagpagamot ng kulugo sa maseselang bahagi ng katawan, sipilis, gonorea o iba pang nakahahawang sakit mula sa pagtatalik?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question25" name="question25" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+
+                    <div class="row mb-2 mt-4">
+                        <div class="col-md-12">
+                            <center>
+                                <h1>NAGKAROON SA MGA SUMUSUNOD:</h1>
+                            </center>
+                        </div>
+                    </div>
+
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>26.	Kanser,sakit sa dugo o di maipaliwanag na pagdurugo(hemophilia)?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question26" name="question26" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>27.	Sakit sa puso o pananakit ng dibdib?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question27" name="question27" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>28.	Sakit sa baga, tuberkulosiso hika?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question28" name="question28" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>29.	Sakit sa bato, diabetes o epilepsy?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question29" name="question29" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>30.	Bulutong o singaw?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question30" name="question30" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>31.	Iba pang sakit na di nabanggit o naoperahan?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <input class="form-control form-control-lg" type="text" id="question31" name="question31" placeholder="question31" disabled>
+                                            <label class="form-label" for="question31">ANSWER</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>32.	Nagkaroon ka ba ng pantal o niagnat? Ito ba ay kasabay ng pananakit ng kasukasuan o rayuma o pamumula ng mata?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question32" name="question32" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+
+                    <div class="row mb-2 mt-4">
+                        <div class="col-md-12">
+                            <center>
+                                <h1>PARA SA MGA BABAE LAMANG:</h1>
+                            </center>
+                        </div>
+                    </div>
+
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+                    <!--=====================================================================================================================================-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>33.	Ikaw ba ay buntis ngayon? Nagbuntis sa kahit anong pagkakataon?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question33" name="question33" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>34.	Kailan ang huli mong panganganak?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <input class="form-control form-control-lg" type="text" id="question34" name="question34" placeholder="question34" disabled>
+                                            <label class="form-label" for="question34">ANSWER</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>35.	Sa nakaraang 1 TAON, nakunan o nagpalaglag ka ba?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question35" name="question35" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>36.	Ikaw ba ay nagpapasuso ng bata ngayon?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <select class="form-control form-control-lg p-2" id="question36" name="question36" disabled>
+                                                <option selected disabled>--SELECT--</option>
+                                                <option value="Oo">Oo</option>
+                                                <option value="Hindi">Hindi</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+
+                    <!--QUESTION-->
+                    <div class="q1">
+                        <div class="row mt-2">
+                            <h4>37.	Kalian ang huli mong buwanang dalaw(regla)?</h4>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row mb-4">
+                                    <div class="col-md-12">
+                                        <div class="form-floating">
+                                            <input class="form-control form-control-lg" type="text" id="question37" name="question37" placeholder="question37" disabled>
+                                            <label class="form-label" for="question37">ANSWER</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--BREAK-->
+                    
                     <!--BUTTON-->               
                     <center>
                             <div class="row mb-5">
                                 <div class="col-md-6">
-                                    <button type="submit" name="btnApproved" class="btnApprove btn-success btn-lg btn-block">Approve</button>
+                                    <button type="submit" name="btnApproved" class="btnApprove btn-success btn-lg btn-block text-dark">Approve</button>
                                 </div>
                                 <div class="col-md-6">
-                                    <button type="submit" name="btnDenied" class="btnDeny btn-danger btn-lg btn-block">Deny</button>
+                                    <button type="submit" name="btnDenied" class="btnDeny btn-danger btn-lg btn-block text-dark">Deny</button>
                                 </div>
                             </div>
                     </center>

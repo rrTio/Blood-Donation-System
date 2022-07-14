@@ -3,6 +3,8 @@ include_once("./database/connection.php");
 session_start();
 $id = $_SESSION['donorID'];
 $fullName = $_SESSION['fullname'];
+$gender = $_SESSION['gender'];
+$bloodType = $_SESSION['bloodType'];
 ?>
 
 <!DOCTYPE html>
@@ -18,15 +20,16 @@ $fullName = $_SESSION['fullname'];
         <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css'>
         <link rel='stylesheet' href='https://unicons.iconscout.com/release/v3.0.6/css/line.css'>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="./assets/css/headRegistration.css">
+        <link rel="stylesheet" href="./assets/css/donorRequestForm.css">
         <link rel="stylesheet" href="./assets/css/main.css">
-        <script type="text/javascript" src="./assets/js/headRegistration.js"></script>
+        <script type="text/javascript" src="./assets/js/donorRequestForm.js"></script>
     </head>
     <body>
         <section>
             <div class="container mt-3">
                 <form name="donorRequestForm" method="POST" action="./database/donorRequestSched.php">
                     <input type="hidden" name='donorID' value='<?php echo $id?>'>
+                    <input type="hidden" name='donorFullName' value='<?php echo $id?>'>
                     <div class="row mb-4 headerTitle">
                         <div class="col-md-12">
                             <center>
@@ -48,7 +51,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question1" name="question1" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -71,7 +74,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question2" name="question2" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -94,7 +97,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question3" name="question3" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -117,7 +120,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question4" name="question4" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -140,7 +143,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question5" name="question5" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -163,7 +166,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question6" name="question6" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -186,7 +189,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question7" name="question7" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -209,7 +212,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question8" name="question8" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -248,7 +251,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question9" name="question9" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -271,7 +274,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question10" name="question10" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -294,7 +297,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question11" name="question11" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -333,7 +336,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question12" name="question12" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -356,7 +359,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question13" name="question13" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -379,7 +382,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question14" name="question14" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -402,7 +405,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question15" name="question15" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -425,7 +428,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question16" name="question16" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -448,7 +451,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question17" name="question17" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -471,7 +474,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question18" name="question18" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -494,7 +497,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question19" name="question19" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -533,7 +536,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question20" name="question20" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -556,7 +559,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question21" name="question21" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -579,7 +582,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question22" name="question22" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -602,7 +605,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question23" name="question23" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -625,7 +628,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question24" name="question24" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -648,7 +651,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question25" name="question25" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -687,7 +690,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question26" name="question26" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -710,7 +713,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question27" name="question27" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -733,7 +736,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question28" name="question28" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -756,7 +759,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question29" name="question29" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -779,7 +782,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question30" name="question30" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -822,7 +825,7 @@ $fullName = $_SESSION['fullname'];
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question32" name="question32" required>
-                                                <option selected disabled>--SELECT--</option>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -860,8 +863,8 @@ $fullName = $_SESSION['fullname'];
                                 <div class="row mb-4">
                                     <div class="col-md-12">
                                         <div class="form-floating">
-                                            <select class="form-control form-control-lg p-2" id="question33" name="question33">
-                                                <option selected disabled>--SELECT--</option>
+                                            <select class="form-control form-control-lg p-2" id="question33" name="question33" placeholder='question33'>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -883,7 +886,7 @@ $fullName = $_SESSION['fullname'];
                                 <div class="row mb-4">
                                     <div class="col-md-12">
                                         <div class="form-floating">
-                                            <input class="form-control form-control-lg" type="text" id="question34" name="question34" placeholder="question34">
+                                            <input class="form-control form-control-lg" type="text" id="question34" name="question34" placeholder='question34'>
                                             <label class="form-label" for="question34">ANSWER</label>
                                         </div>
                                     </div>
@@ -903,8 +906,8 @@ $fullName = $_SESSION['fullname'];
                                 <div class="row mb-4">
                                     <div class="col-md-12">
                                         <div class="form-floating">
-                                            <select class="form-control form-control-lg p-2" id="question35" name="question35">
-                                                <option selected disabled>--SELECT--</option>
+                                            <select class="form-control form-control-lg p-2" id="question35" name="question35" placeholder='question35'>
+                                                <option value='NO ANSWER' selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -926,8 +929,8 @@ $fullName = $_SESSION['fullname'];
                                 <div class="row mb-4">
                                     <div class="col-md-12">
                                         <div class="form-floating">
-                                            <select class="form-control form-control-lg p-2" id="question36" name="question36">
-                                                <option selected disabled>--SELECT--</option>
+                                            <select class="form-control form-control-lg p-2" id="question36" name="question36" placeholder='question36'>
+                                                <option value="NO ANSWER" selected hidden>--SELECT--</option>
                                                 <option value="Oo">Oo</option>
                                                 <option value="Hindi">Hindi</option>
                                             </select>
@@ -949,7 +952,7 @@ $fullName = $_SESSION['fullname'];
                                 <div class="row mb-4">
                                     <div class="col-md-12">
                                         <div class="form-floating">
-                                            <input class="form-control form-control-lg" type="text" id="question37" name="question37" placeholder="question37">
+                                            <input class="form-control form-control-lg" type="text" id="question37" name="question37" placeholder='question37'>
                                             <label class="form-label" for="question37">ANSWER</label>
                                         </div>
                                     </div>
@@ -964,7 +967,7 @@ $fullName = $_SESSION['fullname'];
                     <center>
                         <div class="row mb-5">
                             <div class="col-md-12">
-                                <button type="submit" name="btnRequestSched" class="w-75 btn btn-primary btn-block btn-large">Register</button>
+                                <button type="submit" onclick='return checkAnswer()' name="btnRequestSched" class="w-75 btn btn-primary btn-block btn-large">REQUEST SCHEDULE</button>
                             </div>
                         </div>
                     </center>
