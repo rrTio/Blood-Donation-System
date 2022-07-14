@@ -52,6 +52,50 @@ include_once("./database/connection.php");
                                     $address = $donorInfo['donorAddress'];
                                 }
                             }
+
+                            $getAnswers = "SELECT * FROM requestformtable WHERE donorID = '$donorID';";
+                            $answers = mysqli_query($conn, $getAnswers);
+                            if(mysqli_num_rows($answers) > 0){
+                                while($viewAnswers = mysqli_fetch_assoc($answers)){
+                                    $q1 = $viewAnswers['question1'];
+                                    $q2 = $viewAnswers['question2'];
+                                    $q3 = $viewAnswers['question3'];
+                                    $q4 = $viewAnswers['question4'];
+                                    $q5 = $viewAnswers['question5'];
+                                    $q6 = $viewAnswers['question6'];
+                                    $q7 = $viewAnswers['question7'];
+                                    $q8 = $viewAnswers['question8'];
+                                    $q9 = $viewAnswers['question9'];
+                                    $q10 = $viewAnswers['question10'];
+                                    $q11 = $viewAnswers['question11'];
+                                    $q12 = $viewAnswers['question12'];
+                                    $q13 = $viewAnswers['question13'];
+                                    $q14 = $viewAnswers['question14'];
+                                    $q15 = $viewAnswers['question15'];
+                                    $q16 = $viewAnswers['question16'];
+                                    $q17 = $viewAnswers['question17'];
+                                    $q18 = $viewAnswers['question18'];
+                                    $q19 = $viewAnswers['question19'];
+                                    $q20 = $viewAnswers['question20'];
+                                    $q21 = $viewAnswers['question21'];
+                                    $q22 = $viewAnswers['question22'];
+                                    $q23 = $viewAnswers['question23'];
+                                    $q24 = $viewAnswers['question24'];
+                                    $q25 = $viewAnswers['question25'];
+                                    $q26 = $viewAnswers['question26'];
+                                    $q27 = $viewAnswers['question27'];
+                                    $q28 = $viewAnswers['question28'];
+                                    $q29 = $viewAnswers['question29'];
+                                    $q30 = $viewAnswers['question30'];
+                                    $q31 = $viewAnswers['question31'];
+                                    $q32 = $viewAnswers['question32'];
+                                    $q33 = $viewAnswers['question33'];
+                                    $q34 = $viewAnswers['question34'];
+                                    $q35 = $viewAnswers['question35'];
+                                    $q36 = $viewAnswers['question36'];
+                                    $q37 = $viewAnswers['question37'];
+                                }
+                            }
                         }
 
                     ?>
@@ -220,9 +264,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question1" name="question1" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q1=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q1=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q1=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -243,9 +287,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question2" name="question2" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q2=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q2=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q2=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -266,9 +310,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question3" name="question3" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q3=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q3=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q3=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -289,9 +333,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question4" name="question4" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q4=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q4=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q4=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -312,9 +356,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question5" name="question5" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q5=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q5=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q5=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -335,9 +379,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question6" name="question6" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q6=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q6=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q6=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -358,9 +402,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question7" name="question7" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q7=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q7=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q7=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -381,9 +425,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question8" name="question8" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q8=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q8=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q8=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -420,9 +464,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question9" name="question9" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q9=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q9=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q9=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -443,9 +487,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question10" name="question10" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q10=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q10=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q10=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -466,9 +510,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question11" name="question11" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q11=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q11=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q11=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -505,9 +549,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question12" name="question12" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q12=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q12=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q12=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -528,9 +572,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question13" name="question13" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q13=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q13=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q13=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -551,9 +595,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question14" name="question14" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q14=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q14=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q14=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -574,9 +618,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question15" name="question15" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q15=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q15=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q15=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -597,9 +641,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question16" name="question16" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q16=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q16=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q16=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -620,9 +664,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question17" name="question17" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q17=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q17=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q17=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -643,9 +687,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question18" name="question18" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q18=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q18=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q18=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -666,9 +710,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question19" name="question19" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q19=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q19=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q19=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -705,9 +749,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question20" name="question20" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q20=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q20=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q20=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -728,9 +772,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question21" name="question21" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q21=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q21=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q21=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -751,9 +795,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question22" name="question22" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q22=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q22=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q22=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -774,9 +818,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question23" name="question23" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q23=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q23=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q23=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -797,9 +841,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question24" name="question24" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q24=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q24=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q24=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -820,9 +864,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question25" name="question25" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q25=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q25=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q25=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -859,9 +903,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question26" name="question26" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q26=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q26=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q26=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -882,9 +926,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question27" name="question27" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q27=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q27=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q27=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -905,9 +949,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question28" name="question28" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q28=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q28=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q28=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -928,9 +972,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question29" name="question29" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q29=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q29=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q29=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -951,9 +995,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question30" name="question30" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q30=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q30=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q30=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -973,7 +1017,7 @@ include_once("./database/connection.php");
                                 <div class="row mb-4">
                                     <div class="col-md-12">
                                         <div class="form-floating">
-                                            <input class="form-control form-control-lg" type="text" id="question31" name="question31" placeholder="question31" disabled>
+                                            <input class="form-control form-control-lg" type="text" id="question31" name="question31" value='<?php echo $q31 ?>' placeholder="question31" disabled>
                                             <label class="form-label" for="question31">ANSWER</label>
                                         </div>
                                     </div>
@@ -994,9 +1038,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question32" name="question32" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q32=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q32=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q32=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -1033,9 +1077,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question33" name="question33" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q36=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q36=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q36=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -1055,7 +1099,7 @@ include_once("./database/connection.php");
                                 <div class="row mb-4">
                                     <div class="col-md-12">
                                         <div class="form-floating">
-                                            <input class="form-control form-control-lg" type="text" id="question34" name="question34" placeholder="question34" disabled>
+                                            <input class="form-control form-control-lg" type="text" id="question34" name="question34" value='<?php echo $q34 ?>' placeholder="question34" disabled>
                                             <label class="form-label" for="question34">ANSWER</label>
                                         </div>
                                     </div>
@@ -1076,9 +1120,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question35" name="question35" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q35=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q35=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q35=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -1099,9 +1143,9 @@ include_once("./database/connection.php");
                                     <div class="col-md-12">
                                         <div class="form-floating">
                                             <select class="form-control form-control-lg p-2" id="question36" name="question36" disabled>
-                                                <option selected disabled>--SELECT--</option>
-                                                <option value="Oo">Oo</option>
-                                                <option value="Hindi">Hindi</option>
+                                                <option <?php echo ($q36=='NO ANSWER')?('selected'):(''); ?>>NO ANSWER</option>
+                                                <option <?php echo ($q36=='Oo')?('selected'):(''); ?>>Oo</option>
+                                                <option <?php echo ($q36=='Hindi')?('selected'):(''); ?>>Hindi</option>
                                             </select>
                                         </div>
                                     </div>
@@ -1121,7 +1165,7 @@ include_once("./database/connection.php");
                                 <div class="row mb-4">
                                     <div class="col-md-12">
                                         <div class="form-floating">
-                                            <input class="form-control form-control-lg" type="text" id="question37" name="question37" placeholder="question37" disabled>
+                                            <input class="form-control form-control-lg" type="text" id="question37" name="question37" value='<?php echo $q37 ?>' placeholder="question37" disabled>
                                             <label class="form-label" for="question37">ANSWER</label>
                                         </div>
                                     </div>

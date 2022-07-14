@@ -29,13 +29,11 @@ $bloodType = $_SESSION['bloodType'];
             <div class="container mt-3">
                 <form name="donorRequestForm" method="POST" action="./database/donorRequestSched.php">
                     <input type="hidden" name='donorID' value='<?php echo $id?>'>
-                    <input type="hidden" name='donorFullName' value='<?php echo $id?>'>
+                    <input type="hidden" name='donorFullName' value='<?php echo $fullName?>'>
                     <div class="row mb-4 headerTitle">
                         <div class="col-md-12">
                             <center>
                                 <h1>Request Form</h1>
-                                <p><?php echo $fullName?></p>
-                                <p><?php echo $id?></p>
                             </center>
                         </div>
                     </div>
@@ -967,7 +965,7 @@ $bloodType = $_SESSION['bloodType'];
                     <center>
                         <div class="row mb-5">
                             <div class="col-md-12">
-                                <button type="submit" onclick='return checkAnswer()' name="btnRequestSched" class="w-75 btn btn-primary btn-block btn-large">REQUEST SCHEDULE</button>
+                                <button type="submit" onclick='return checkAnswer()' name="btnSubmitRequest" class="w-75 btn btn-primary btn-block btn-large">REQUEST SCHEDULE</button>
                             </div>
                         </div>
                     </center>

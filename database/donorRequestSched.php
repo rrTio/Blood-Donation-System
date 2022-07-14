@@ -3,6 +3,22 @@
 include_once("connection.php");
 
 if(isset($_POST['btnRequestSched'])){
+    $donorID = $_POST['btnRequestSched'];
+
+    $checkDB = "SELECT * FROM requestformtable WHERE donorID = '$donorID';";
+    $query = mysqli_query($conn, $checkDB);
+    if(mysqli_num_rows($query) > 0){
+    echo '<script type="text/javascript">
+            alert("REQUEST ALREADY EXISTS\nYOU CAN ONLY FILE A REQUEST ONCE");
+            window.location.href = "../donorRequest.php";
+        </script>';
+    }
+    else{
+        header("Location: ../donorRequestForm.php");
+    }
+}
+
+if(isset($_POST['btnSubmitRequest'])){
     $donorID = $_POST['donorID'];
     $fullName = $_POST['donorFullName'];
     $q1 = $_POST['question1'];

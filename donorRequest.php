@@ -1,6 +1,7 @@
 <?php
 include_once("./database/connection.php"); 
 session_start();
+$id = $_SESSION['donorID']
 ?>
 
 <!DOCTYPE html>
@@ -17,14 +18,15 @@ session_start();
         <link rel='stylesheet' href='https://unicons.iconscout.com/release/v3.0.6/css/line.css'>
         <link rel="stylesheet" href="./assets/css/donorRequest.css">
         <link rel="stylesheet" href="./assets/css/main.css">
-        <script type="text/javascript" src="./assets/js/donorRequest.js"></script>
     </head>
     <body>
         <div class="top" id='top'>
             <center>
                 <h3 class="welcome">Welcome, <?php echo $_SESSION['firstname']?></h3>
                 <h1 class="header">DONATE BLOOD NOW!</h1>
-                <button type="submit" name="btnRequestSched" onclick='return registrationForm()' class="btn btn-large">Request schedule</button>
+                <form action='./database/donorRequestSched.php' method='POST'>
+                    <button type="submit" name="btnRequestSched" value='<?php echo $id?>' class="btn btn-large">Request schedule</button>
+                </form>
             </center>
         </div>
     </body>
