@@ -17,7 +17,7 @@ include_once("./database/connection.php");
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
         <link rel="stylesheet" href="./assets/css/headViewRequestForm.css">
         <link rel="stylesheet" href="./assets/css/main.css">
-        <script type="text/javascript" src="./assets/js/headViewRequestForm.js"></script>
+        <script type="text/javascript" src="./assets/js/adminApproval.js"></script>
     </head>
     <body>
         <section>
@@ -127,7 +127,7 @@ include_once("./database/connection.php");
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input class="form-control form-control-lg p-2" type="text" id="answer" name="answer" value="<?php echo $donorID ?>" disabled>
-                                        <input type="hidden" name='fullName' value='<?php echo $fullName?>'>
+                                        <input type="hidden" name='fullName' id='fullName' value='<?php echo $fullName?>'>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -215,7 +215,7 @@ include_once("./database/connection.php");
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input class="form-control form-control-lg p-2" type="text" id="answer" name="answer" value="<?php echo $email ?>" disabled>
-                                        <input type="hidden" name='email' value='<?php echo $email?>'>
+                                        <input type="hidden" name='email' id='email' value='<?php echo $email?>'>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -1182,7 +1182,7 @@ include_once("./database/connection.php");
                                     <button type="submit" name="btnApproved" class="btnApprove btn-success btn-lg btn-block text-dark">Approve</button>
                                 </div>
                                 <div class="col-md-6">
-                                    <button type="submit" name="btnDenied" class="btnDeny btn-danger btn-lg btn-block text-dark">Deny</button>
+                                    <button type="submit" name="btnDenied" onclick='return donorRequestDenied()' class="btnDeny btn-danger btn-lg btn-block text-dark">Deny</button>
                                 </div>
                             </div>
                     </center>
