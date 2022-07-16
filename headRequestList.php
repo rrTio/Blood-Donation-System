@@ -24,7 +24,7 @@ include_once("./database/connection.php");
         <div class="row mb-2 headerTitle">
             <div class="col-md-12">
                 <center>
-                    <h1>DONOR REQUESTS</h1>
+                    <h1>DONOR REQUESTS LIST</h1>
                 </center>
             </div>
         </div>
@@ -74,8 +74,8 @@ include_once("./database/connection.php");
                                     <td name='email'>".$donorRequests['email']."</td>
                                     <td name='phone'>".$donorRequests['contactNumber']."</td>
                                     <td name='gender'>".$donorRequests['gender']."</td>
-                                    <td name='bloodtype'>".$donorRequests['bloodType']."</td>
-                                    <td name='view'><button class='btn-primary' name='btnView' value=".$donorRequests['donorID'].">VIEW FORM ".$donorRequests['donorID']."</button></td>
+                                    <td name='bloodtype'><strong>".$donorRequests['bloodType']."</strong></td>
+                                    <td name='view'><button class='btn-primary' name='btnView' value=".$donorRequests['donorID'].">VIEW FORM</button></td>
                                 </tr>
                             </form>
                             ";
