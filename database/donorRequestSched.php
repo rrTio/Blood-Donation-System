@@ -62,6 +62,23 @@ if(isset($_POST['btnSubmitRequest'])){
     $insertToRequestFormTable = "INSERT INTO requestformtable (donorID, fullName, question1, question2, question3, question4, question5, question6, question7, question8, question9, question10, question11, question12, question13, question14, question15, question16, question17, question18, question19, question20, question21, question22, question23, question24, question25, question26, question27, question28, question29, question30, question31, question32, question33, question34, question35, question36, question37)
                                     VALUES('$donorID','$fullName','$q1','$q2','$q3','$q4','$q5','$q6','$q7','$q8','$q9','$q10','$q11','$q12','$q13','$q14','$q15','$q16','$q17','$q18','$q19','$q20','$q21','$q22','$q23','$q24','$q25','$q26','$q27','$q28','$q29','$q30','$q31','$q32','$q33','$q34','$q35','$q36','$q37');";
     mysqli_query($conn, $insertToRequestFormTable);
+
+    $getDonorInfo = "SELECT * FROM donortable WHERE donorID = '$donorID';";
+        $query = mysqli_query($conn, $getDonorInfo);
+        if(mysqli_num_rows($query) >0){
+            while($donorInfo = mysqli_fetch_assoc($query)){
+                $id = $donorInfo['donorID'];
+                $fullName = $donorInfo['fullName'];
+                $email = $donorInfo['donorEmail'];
+                $contact = $donorInfo['contactNumber'];
+                $gender = $donorInfo['gender'];
+                $bloodType = $donorInfo['bloodType'];
+            }
+        }
+        $insertRequestTable = "INSERT INTO requesttable (donorID, fullName, email, contactNumber, gender, bloodType) 
+                                VALUES ('$donorID', '$fullName', '$email', '$contact', '$gender', '$bloodType');";
+        mysqli_query($conn, $insertRequestTable);
+        
     header("Location: ../donorRequest.php");
 }
 

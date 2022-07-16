@@ -1,5 +1,8 @@
 <?php 
 include_once("./database/connection.php");
+$subject = 'REQUEST FOR DONATION SCHEDULE';
+$message = 'WE ARE SORRY FOR THE INCONVENIENCE, YOUR REQUEST FOR DONATION HAS BEEN DENIED.%0D%0A%0D%0A%0D%0AYOURS TRULY,%0D%0ASYSTEM ADMIN';
+    
 ?>
 
 <!DOCTYPE html>
@@ -17,13 +20,12 @@ include_once("./database/connection.php");
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
         <link rel="stylesheet" href="./assets/css/headViewRequestForm.css">
         <link rel="stylesheet" href="./assets/css/main.css">
-        <script type="text/javascript" src="./assets/js/adminApproval.js"></script>
+
     </head>
     <body>
         <section>
             <div class="container mt-3">
-                <form name="headReg" method="POST" action="./database/adminApproval.php">
-                    <input type="hidden" name='headID' value='<?php echo $id?>'>
+                <form method="POST" action="./headApproval.php">
                     <div class="row mb-2 headerTitle">
                         <div class="col-md-12">
                             <center>
@@ -133,6 +135,7 @@ include_once("./database/connection.php");
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input class="form-control form-control-lg p-2" type="text" id="answer" name="answer" value="<?php echo $fullName ?>" disabled>
+                                        <input type="hidden" name='donorID' value='<?php echo $donorID?>'>
                                     </div>
                                 </div>
                             </div>
@@ -1182,12 +1185,12 @@ include_once("./database/connection.php");
                                     <button type="submit" name="btnApproved" class="btnApprove btn-success btn-lg btn-block text-dark">Approve</button>
                                 </div>
                                 <div class="col-md-6">
-                                    <button type="submit" name="btnDenied" onclick='return donorRequestDenied()' class="btnDeny btn-danger btn-lg btn-block text-dark">Deny</button>
+                                    <button type="submit" name="btnDenied" class="btnDeny btn-danger btn-lg btn-block text-dark">Deny</button>
                                 </div>
                             </div>
                     </center>
                 </form>
             </div>
-        </section>
+        </section>        
     </body>
 </html>

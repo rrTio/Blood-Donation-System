@@ -45,30 +45,13 @@ $createDonorTable = "CREATE TABLE IF NOT EXISTS `donortable`(
     `donorPassword` TEXT
 );";
 
-$createPatient = "CREATE TABLE IF NOT EXISTS `patientsTable`(
-    `firstName` TEXT,
-    `middleName` TEXT,
-    `lastName` TEXT,
-    `fullName` TEXT,
-    `age` VARCHAR(3),
-    `patientAddress` TEXT,
-    `gender` TEXT
-);";
-
 $createRequestTable = "CREATE TABLE IF NOT EXISTS `requestTable`(
     `donorID` TEXT,
-    `firstName` TEXT,
-    `lastName` TEXT,
     `fullName` TEXT,
     `bloodType` TEXT,
     `email` TEXT,
     `contactNumber` VARCHAR(11),
-    `donationText` TEXT,
-    `donationDate` DATE,
-    `donationTime` TEXT,
-    `donorAddress` TEXT,
-    `gender` TEXT,
-    `venue` TEXT
+    `gender` TEXT
 );";
 
 $createRequestFormTable = "CREATE TABLE IF NOT EXISTS `requestFormTable`(
@@ -127,7 +110,6 @@ $insertDays = "INSERT IGNORE INTO birthDays (birthdays) VALUES ('01'),('02'),('0
 
 mysqli_query($conn, $createHeadTable);
 mysqli_query($conn, $createDonorTable);
-mysqli_query($conn, $createPatient);
 mysqli_query($conn, $createRequestTable);
 
 mysqli_query($conn, $createBloodTypes);
