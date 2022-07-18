@@ -51,7 +51,7 @@ $donationID = date("Y") . "-" . substr(hexdec(uniqid()), 12) . date("s");
                         <div class="col-md-12">
                             <div class="form-floating">
                                 <select class="form-control form-control-lg p-2 pt-3" id="venue" name="venue" required>
-                                    <option selected hidden disabled>--SELECT--</option>
+                                    <option selected hidden disabled value='NONE'>--SELECT--</option>
                                     <?php
                                         $getOrganization = "SELECT * FROM organizationsTable;";
                                         $resultOrganization = mysqli_query($conn, $getOrganization);
@@ -70,7 +70,7 @@ $donationID = date("Y") . "-" . substr(hexdec(uniqid()), 12) . date("s");
                     <div class="col-md-3">
                         <div class="form-floating">
                             <select class="form-control form-control-lg p-2 pt-3" id="da_month" name="da_month" required>
-                                <option selected disabled hidden>--SELECT--</option>
+                                <option selected disabled hidden value='NONE'>--SELECT--</option>
                                 <?php
                                     $getMonths = "SELECT * FROM birthmonths;";
                                     $resultMonths = mysqli_query($conn, $getMonths);
@@ -88,7 +88,7 @@ $donationID = date("Y") . "-" . substr(hexdec(uniqid()), 12) . date("s");
                     <div class="col-md-3">
                         <div class="form-floating">
                             <select class="form-control form-control-lg p-2 pt-3" id="da_day" name="da_day" required>
-                                <option selected hidden disabled>--SELECT--</option>
+                                <option selected hidden disabled value='NONE'>--SELECT--</option>
                                 <?php
                                     $getDays = "SELECT * FROM birthdays;";
                                     $resultDays = mysqli_query($conn, $getDays);
@@ -105,7 +105,7 @@ $donationID = date("Y") . "-" . substr(hexdec(uniqid()), 12) . date("s");
 
                     <div class="col-md-3">
                         <div class="form-floating">
-                            <input class="form-control form-control-lg" type="number" id="da_year" name="da_year" placeholder="Birth Year" onKeyPress="if(this.value.length==4) return false;" required>
+                            <input class="form-control form-control-lg" type="number" id="da_year" name="da_year" placeholder="da_year" onKeyPress="if(this.value.length==4) return false;" required>
                             <label class="form-label" for="da_year">YEAR</label>
                         </div>
                     </div>
@@ -114,7 +114,7 @@ $donationID = date("Y") . "-" . substr(hexdec(uniqid()), 12) . date("s");
             </div>
             <div class="row mx-4 mt-2">
                 <div class="col-md-3">
-                    <input type="time" id="appt" name="appt" class="form-control form-control-lg" >
+                    <input type="time" id="appt" name="appt" min="07:00" max="23:59" class="form-control form-control-lg" >
                 </div>
             </div>
 

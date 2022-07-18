@@ -3,7 +3,15 @@
     border-radius: 25px;
     padding: 10px;
     color: #FFFFFF;
-    margin: 15px 25px 10px 25px;
+    margin: 15px 25px 0px 25px;
+}
+
+.headerTabs{
+  background-color: #2e2e2e;
+  border-radius: 25px;
+  padding: 10px;
+  color: #FFFFFF;
+  margin: 15px 25px 0px 25px;
 }
 
 table th , table td{
@@ -47,4 +55,20 @@ th {
   float:right;
   text-align:right;
   color: #999;
+}
+
+#anchorPage{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  background-color: #999;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+}
+
+#anchorPage:hover{
+  background-color: #777;
 }

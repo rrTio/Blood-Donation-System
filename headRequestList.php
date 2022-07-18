@@ -21,6 +21,18 @@ include_once("./database/connection.php");
         <script type="text/javascript" src="./assets/js/headRequestList.js"></script>
     </head>
     <body>
+        <div class="row mb-2 headerTabs">
+            <div class="col-md-6">
+                <center>
+                    <a id='anchorPage' href="./headRequestList.php">REQUESTS</a>
+                </center>
+            </div>
+            <div class="col-md-6">
+                <center>
+                    <a id='anchorPage' href="./headHistory.php">HISTORY</a>
+                </center>
+            </div>
+        </div>
         <div class="row mb-2 headerTitle">
             <div class="col-md-12">
                 <center>

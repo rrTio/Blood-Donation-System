@@ -10,7 +10,7 @@ function approveDonor(){
 
     var subject = '&su=REQUEST%20FOR%20DONATION%20SCHEDULE';
     var receiver = '&to=' + email;
-    var first_line = '&body=DEAR%20' + fullName + ',%0D%0AYour request for donation has been approved%0D%0A';
+    var first_line = '&body=Dear%20' + fullName + ',%0D%0AYour request for donation has been approved%0D%0A';
     var second_line = "%0D%0Ahere are the details of your donation%0D%0A";
     var details = 'DATE:%20' + month + '%20' + day + ',%20' + year + '%0D%0ATIME:%20' + time + '%0D%0ALOCATION:%20' + venue + '%0D%0ADONATION%20ID:%20' + donationID;
     var link = "https://mail.google.com/mail/?view=cm&fs=1";
