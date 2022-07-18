@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
         <link rel="stylesheet" href="./assets/css/headViewRequestForm.css">
         <link rel="stylesheet" href="./assets/css/main.css">
-
+        <script type="text/javascript" src="./assets/js/headApproval.js"></script>
     </head>
     <body>
         <section>
@@ -1182,7 +1182,7 @@
                                     <button type="submit" name="btnApproved" class="btnApprove btn-success btn-lg btn-block text-dark">Approve</button>
                                 </div>
                                 <div class="col-md-6">
-                                    <button type="submit" onclick="" name="btnDenied" class="btnDeny btn-danger btn-lg btn-block text-dark">Deny</but>
+                                    <button type="submit" onclick="denyDonor()" name="btnDenied" class="btnDeny btn-danger btn-lg btn-block text-dark">Deny</but>
                                 </div>
                             </div>
                     </center>

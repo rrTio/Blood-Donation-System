@@ -13,4 +13,9 @@ if(isset($_POST['btnApproved'])){
     $_SESSION['da_donorID'] = $donorID;
     header("Location: ../headScheduling.php");
 }
+
+if(isset($_POST['btnDenied'])){
+    header("Location: ../headRequestList.php");
+}
+
 ?>

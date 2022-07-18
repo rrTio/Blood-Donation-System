@@ -21,5 +21,14 @@ function approveDonor(){
 }
 
 function denyDonor(){
-    
+    var fullname = document.forms['viewForm']['fullName'].value;
+    var email = document.forms['viewForm']['email'].value;
+
+    var subject = '&su=REQUEST%20FOR%20DONATION%20SCHEDULE';
+    var receiver = '&to=' + email;
+    var message = '&body=Dear%20' + fullname + ',%0D%0AWe apologize for the inconvenience, your request for donation has been denied%0D%0A%0D%0AKind%20Regards,%0D%0ASystem%20Admin';
+    var link = "https://mail.google.com/mail/?view=cm&fs=1";
+
+    var url = link + subject + receiver + message;
+    window.open(url, '_blank');
 }
