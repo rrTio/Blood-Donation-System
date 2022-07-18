@@ -18,7 +18,7 @@
             <form action="./database/login.php" method="post">
                 <input type="text" name="username" placeholder="Username or Email" required="required" />
                 <input type="password" name="password" placeholder="Password" required="required" />
-                <button type="submit" name="btnLoginHead" class="btn btn-block btn-large">Enter</button>
+                <button type="submit" onclick='window.open("https://accounts.google.com/signin/v2/identifier?service=mail&passive=1209600&osid=1&continue=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&followup=https%3A%2F%2Fmail.google.com%2Fmail%2Fu%2F0%2F&emr=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin#inbox","_blank")' name="btnLoginHead" class="btn btn-block btn-large">Enter</button>
                 <center class="marginButton">
                     <a id="forgotPassword" onClick="return headForgotPassword()">Forgot password?</a>
                 </center>

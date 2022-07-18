@@ -1,8 +1,5 @@
 <?php 
-include_once("./database/connection.php");
-$subject = 'REQUEST FOR DONATION SCHEDULE';
-$message = 'WE ARE SORRY FOR THE INCONVENIENCE, YOUR REQUEST FOR DONATION HAS BEEN DENIED.%0D%0A%0D%0A%0D%0AYOURS TRULY,%0D%0ASYSTEM ADMIN';
-
+    include_once("./database/connection.php");
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +22,7 @@ $message = 'WE ARE SORRY FOR THE INCONVENIENCE, YOUR REQUEST FOR DONATION HAS BE
     <body>
         <section>
             <div class="container mt-3">
-                <form method="POST" action="./database/headApproval.php">
+                <form name='viewForm' method='POST' action='./database/headApproval.php'>
                     <div class="row mb-2 headerTitle">
                         <div class="col-md-12">
                             <center>
@@ -1177,13 +1174,7 @@ $message = 'WE ARE SORRY FOR THE INCONVENIENCE, YOUR REQUEST FOR DONATION HAS BE
                         </div>
                     </div>
                     <!--BREAK-->
-                    <?php
-                        $subject = '&su=REQUEST FOR DONATION SCHEDULE';
-                        $receiver = '&to='.$email;
-                        $message = '&body=DEAR '.$fullName.',%0D%0AWE ARE SORRY FOR THE INCONVENIENCE, YOUR REQUEST FOR DONATION HAS BEEN DENIED.%0D%0A%0D%0A%0D%0AYOURS TRULY,%0D%0ASYSTEM ADMIN';
-                        $link = "https://mail.google.com/mail/?view=cm&fs=1";
-                        $url = $link.$subject.$message.$receiver;
-                    ?>
+
                     <!--BUTTON-->               
                     <center>
                             <div class="row mb-5">
@@ -1191,7 +1182,7 @@ $message = 'WE ARE SORRY FOR THE INCONVENIENCE, YOUR REQUEST FOR DONATION HAS BE
                                     <button type="submit" name="btnApproved" class="btnApprove btn-success btn-lg btn-block text-dark">Approve</button>
                                 </div>
                                 <div class="col-md-6">
-                                    <button type="submit" onclick="window.open('<?php echo $url?>', '_blank');" name="btnDenied" class="btnDeny btn-danger btn-lg btn-block text-dark">Deny</but>
+                                    <button type="submit" onclick="" name="btnDenied" class="btnDeny btn-danger btn-lg btn-block text-dark">Deny</but>
                                 </div>
                             </div>
                     </center>
