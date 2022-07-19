@@ -3,7 +3,6 @@ include_once("./database/connection.php");
 session_start();
 $fullname = $_SESSION['da_fullname'];
 $email = $_SESSION['da_email'];
-$donorID = $_SESSION['da_donorID'];
 
 $donationID = date("Y") . "-" . substr(hexdec(uniqid()), 12) . date("s");
 ?>
