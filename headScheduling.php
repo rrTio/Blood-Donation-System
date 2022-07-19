@@ -26,7 +26,7 @@ $donationID = date("Y") . "-" . substr(hexdec(uniqid()), 12) . date("s");
         <script type="text/javascript" src="./assets/js/headApproval.js"></script>
     </head>
     <body>
-        <form name='approval'>
+        <form name='approval' method='POST' action='./database/headApproval.php'>
             <div class="row mb-2 headerTitle">
                 <div class="col-md-12">
                     <center>
@@ -121,7 +121,7 @@ $donationID = date("Y") . "-" . substr(hexdec(uniqid()), 12) . date("s");
             <center>
                 <div class="row mt-5">
                     <div class="col-md-12">
-                        <button type="submit" onclick="approveDonor()"name="btnApproveDonor" class="btn btn-success btn-block btn-large">APPROVE</button>
+                        <button type="submit" onclick="approveDonor()" name="btnApproveDonor" class="btn btn-success btn-block btn-large">APPROVE</button>
                     </div>
                 </div>
             </center>

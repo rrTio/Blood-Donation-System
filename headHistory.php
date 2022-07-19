@@ -45,26 +45,26 @@ session_start();
                         <th>Donor ID</th>
                         <th>Name</th>
                         <th>Email</th>
+                        <th>Date and Time Requested</th>
                         <th>Blood Type</th>
-                        <th>Date and Time</th>
                         <th>RESULT</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php
-                        $getRequests = "SELECT * FROM requesttable";
-                        $requests = mysqli_query($conn, $getRequests);
-                        if(mysqli_num_rows($requests) > 0){
-                            while($donorRequests = mysqli_fetch_assoc($requests)){
+                        $getHistory = "SELECT * FROM historytable";
+                        $history = mysqli_query($conn, $getHistory);
+                        if(mysqli_num_rows($history) > 0){
+                            while($results = mysqli_fetch_assoc($history)){
                                 echo "
                                 <form method='POST' action='./headViewRequestForm.php'>
                                     <tr id='requestsRow'>
-                                        <td name='donorID'>".$donorRequests['donorID']."</td>
-                                        <td name='name'>".$donorRequests['fullName']."</td>
-                                        <td name='email'>".$donorRequests['email']."</td>
-                                        <td name='bloodtype'><strong>".$donorRequests['bloodType']."</strong></td>
-                                        <td name='result'>DATE AND TIME</td>
-                                        <td name='result'><strong>VIEW FORM</strong></td>
+                                        <td name='donorID'>".$results['donorID']."</td>
+                                        <td name='name'>".$results['fullName']."</td>
+                                        <td name='email'>".$results['email']."</td>
+                                        <td name='result'>". $results['reqDate'] . " " . $results['reqTime'] . "</td>
+                                        <td name='bloodtype'><strong>".$results['bloodType']."</strong></td>
+                                        <td name='result'><strong>".$results['result']."</strong></td>
                                     </tr>
                                 </form>
                                 ";

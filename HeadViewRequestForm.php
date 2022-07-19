@@ -132,7 +132,7 @@
                                 <div class="col-md-6">
                                     <div class="form-floating">
                                         <input class="form-control form-control-lg p-2" type="text" id="answer" name="answer" value="<?php echo $fullName ?>" disabled>
-                                        <input type="hidden" name='donorID' value='<?php echo $donorID?>'>
+                                        <input type="hidden" name='req_donorID' value='<?php echo $donorID?>'>
                                     </div>
                                 </div>
                             </div>
