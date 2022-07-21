@@ -91,7 +91,7 @@ include_once("./database/connection.php");
                                 </tr>
                             </form>
                             ";
-                        }
+                        }                        
                     }
                 ?>
             <tbody>

@@ -23,9 +23,9 @@
     <div class="login">
       <h1>Head Forgot Password</h1>
       <form action="./database/database.php" method="post" name="forgotten">
-        <input type="text" name="username" placeholder="Username or Email" required="required" />
-        <input type="password" name="password" placeholder="Password" required="required" />
-        <input type="password" name="confirmPassword" placeholder="Confirm Password" required="required" />
+        <input type="text" name="headUsername" placeholder="Username or Email" required="required" />
+        <input type="password" name="headPassword" placeholder="Password" required="required" />
+        <input type="password" name="headConfirmPassword" placeholder="Confirm Password" required="required" />
         <button type="submit" name="btnChangePasswordHead" onclick="checkValidation()" class="btn btn-block btn-large">Enter</button>
       </form>
     </div>

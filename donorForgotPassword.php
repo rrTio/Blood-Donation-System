@@ -24,9 +24,9 @@
     <div class="login">
       <h1>Donor Forgot Password</h1>
       <form action="./database/database.php" method="post" name="forgotten">
-        <input type="text" name="username" placeholder="Username or Email" required="required" />
-        <input type="password" name="password" placeholder="Password" required="required" />
-        <input type="password" name="confirmPassword" placeholder="Confirm Password" required="required" />
+        <input type="text" name="donorUsername" placeholder="Username or Email" required="required" />
+        <input type="password" name="donorPassword" placeholder="Password" required="required" />
+        <input type="password" name="donorConfirmPassword" placeholder="Confirm Password" required="required" />
         <button type="submit" name="btnChangePasswordDonor" onclick="checkValidation()" class="btn btn-block btn-large">Enter</button>
       </form>
     </div>

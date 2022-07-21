@@ -1,5 +1,6 @@
 <?php 
     include_once("./database/connection.php");
+    session_start();
 ?>
 
 <!DOCTYPE html>
@@ -50,6 +51,7 @@
                                     $contactNumber = $donorInfo['contactNumber'];
                                     $address = $donorInfo['donorAddress'];
                                 }
+                                $_SESSION['donorID'] = $donorID;
                             }
 
                             $getAnswers = "SELECT * FROM requestformtable WHERE donorID = '$donorID';";

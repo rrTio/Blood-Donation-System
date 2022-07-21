@@ -107,7 +107,7 @@ $id = date("Y") . "-" . "03" . substr(hexdec(uniqid()), 12) . date("s");
                         </div>
                     </div>
                     <div class="row mb-4">
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-floating">
                                 <select class="form-control form-control-lg p-2 pt-3" id="bType" name="bType" required>
                                     <option selected disabled>--SELECT--</option>
@@ -124,7 +124,7 @@ $id = date("Y") . "-" . "03" . substr(hexdec(uniqid()), 12) . date("s");
                                 <label class="form-label" for="bType">BLOOD TYPE</label>    
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-6">
                             <div class="form-floating">
                                 <select class="form-control form-control-lg p-2 pt-3" id="gender" name="gender" required>
                                     <option selected disabled>--SELECT--</option>
@@ -132,23 +132,6 @@ $id = date("Y") . "-" . "03" . substr(hexdec(uniqid()), 12) . date("s");
                                     <option value="Female">Female</option>
                                 </select>
                                 <label class="form-label" for="gender">GENDER</label>    
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="form-floating">
-                                <select class="form-control form-control-lg p-2 pt-3" id="venue" name="venue" required>
-                                    <option selected disabled>--SELECT--</option>
-                                    <?php
-                                        $getOrganization = "SELECT * FROM organizationsTable;";
-                                        $resultOrganization = mysqli_query($conn, $getOrganization);
-                                        if(mysqli_num_rows($resultOrganization) > 0){
-                                            while($organization = mysqli_fetch_assoc($resultOrganization)){
-                                                echo "<option value=".$organization['organization'].">".$organization['organization']."</option>";
-                                            }
-                                        }
-                                    ?>
-                                </select>
-                                <label class="form-label" for="venue">DONATON VENUE</label>    
                             </div>
                         </div>
                     </div>
